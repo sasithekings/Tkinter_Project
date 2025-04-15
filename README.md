@@ -17,27 +17,31 @@ A beginner-friendly **Graphical Password Authentication System** built using Pyt
 
 ## 🧠 How It Works
 
-### 1. **User Interface (UI):**
-- Made using Python's built-in GUI toolkit: **Tkinter**
-- Displays an image on a canvas where users can click to register or login
+### 🔐 Registration Flow
 
-### 2. **User Registration:**
-- Enter a username
-- Select **3 to 5 points** on the image (click pattern)
-- Saves:
-  - Clicked points
-  - A **secure hash** of the pattern with a random salt
-  - Image path
+1. User inputs a unique username.
+2. Selects a password image.
+3. Clicks 3–5 points on the image (the "password").
+4. Points are stored with:
+   - SHA-256 hash of the pattern + salt
+   - Image path
+   - Salt (randomized per user)
 
-### 3. **User Login:**
-- Enter the same username
-- Recreate the click pattern (within a ±20 pixel tolerance)
-- If matched, login is successful; else up to **3 attempts** allowed
+### 🔓 Login Flow
 
-### 4. **Security Measures:**
-- Uses **SHA-256 hashing** with random **salt**
-- Pattern comparison done with point tolerance to allow slight deviation
-- Stores data in `users.json` and logs activity in `graphical_auth.log`
+1. User enters their username.
+2. The same image is loaded.
+3. User clicks on the image to reproduce the pattern.
+4. System checks if the click pattern matches within a ±20 pixel tolerance.
+
+---
+
+## 🛡️ Security Highlights
+
+- Uses **SHA-256 hashing** with a unique salt per user.
+- Compares click locations with defined **tolerance** to avoid false rejections.
+- Limits login attempts to prevent brute-force attacks.
+- All events are logged to `graphical_auth.log`.
 
 ---
 
