@@ -41,5 +41,53 @@ A beginner-friendly **Graphical Password Authentication System** built using Pyt
 
 ---
 
-## 🗂️ Project Structure
+
+
+
+---
+
+## 🛠️ Requirements
+
+- Python 3.x
+- Tkinter (usually comes with Python)
+- Pillow (`pip install pillow`)
+
+---
+
+## 📚 Learnings
+
+- GUI development with Tkinter
+- Secure password hashing using SHA-256 with salt
+- Image handling with Pillow
+- JSON data storage and logging
+- Pattern-based authentication logic
+
+---
+
+## 📈 Future Improvements
+
+- Add user image selection from gallery
+- Enhance UI/UX with animations
+- Store user data in an encrypted database
+- Support mobile/touch-based systems
+
+---
+
+## ✅ Usage
+
+1. Run `main.py`
+2. Choose an image and register with a username
+3. Click 3–5 points on the image to register your pattern
+4. Login by entering your username and repeating the pattern
+
+---
+
+## 📄 License
+
+MIT License – feel free to use, modify, and share!
+
+---
+
+Made with ❤️ for learning purposes!
+
 
