@@ -18,7 +18,7 @@ A beginner-friendly **Graphical Password Authentication System** built using Pyt
 ## 🧠 How It Works
 
 ### 🔐 Registration Flow
-
+![](image.png)
 1. User inputs a unique username.
 2. Selects a password image.
 3. Clicks 3–5 points on the image (the "password").
